@@ -1,5 +1,5 @@
 {
-  "name": "ch-ui",
+  "name": "@formizee/clickhouse-ui",
   "private": true,
   "author": {
     "name": "Caio Ricciuti",
@@ -46,6 +46,7 @@
     "cmdk": "^1.0.0",
     "date-fns": "^3.6.0",
     "framer-motion": "^11.1.7",
+    "lodash": "4.17.21",
     "lucide-react": "^0.368.0",
     "monaco-editor": "^0.48.0",
     "papaparse": "^5.4.1",
@@ -90,5 +91,6 @@
     "chrome >= 88",
     "firefox >= 79",
     "safari >= 14"
-  ]
+  ],
+  "packageManager": "pnpm@9.12.3"
 }

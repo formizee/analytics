@@ -1,6 +1,5 @@
 import { useCallback, useState, useMemo, useEffect } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import {
   X,
@@ -11,7 +10,6 @@ import {
   Terminal,
   XSquareIcon,
   Copy,
-  Save,
 } from "lucide-react";
 import {
   DndContext,
@@ -87,7 +85,7 @@ function SortableTab({ tab, isActive, onActivate }: SortableTabProps) {
         <ContextMenuTrigger className="flex h-[150px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm">
           <TabsTrigger
             value={tab.id}
-            className={`data-[state=active]:bg-orange-500 h-8 data-[state=active]:text-primary flex items-center rounded-sm w-full`}
+            className={`data-[state=active]:bg-neutral-950 h-8 data-[state=active]:text-primary flex items-center rounded-sm w-full`}
             onClick={onActivate}
           >
             {isActive && isHovering && tab.type !== "home" && (
@@ -223,13 +221,6 @@ export function WorkspaceTabs() {
         className="flex flex-col h-full"
       >
         <div className="flex-shrink-0 flex items-center">
-          <Button
-            variant="link"
-            className="rounded-none hover:bg-gray-200 h-8 px-2 sticky left-0 z-10 bg-background"
-            onClick={addNewCodeTab}
-          >
-            <Plus className="h-4 w-4" />
-          </Button>
           <ScrollArea className="flex-grow">
             <ContextMenu>
               <ContextMenuTrigger>
